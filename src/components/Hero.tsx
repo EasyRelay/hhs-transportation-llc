@@ -41,24 +41,13 @@ const Hero = () => {
 
       <div ref={heroRef} className="container mx-auto px-6 text-center relative z-10">
         <div className="max-w-4xl mx-auto opacity-0 transform translate-y-10" style={{ animation: 'fadeInUp 1s ease-out 0.5s forwards' }}>
-          {/* Logo Container */}
-          <div className="flex justify-center mb-8">
-            <div className="bg-white p-4 rounded-full shadow-xl transform hover:scale-105 transition-transform duration-300">
-              <div className="bg-gradient-to-r from-blue-500 to-cyan-400 p-1 rounded-full">
-                <div className="bg-white p-2 rounded-full">
-                  <img 
-                    src="/images/Рисунок3.jpg" 
-                    alt="HSS Transportation Logo" 
-                    className="w-28 h-28 rounded-full object-contain" 
-                  />
-                </div>
-              </div>
-            </div>
-          </div>
 
           {/* Company Name */}
+          <h1 className="text-5xl md:text-6xl font-bold text-blue-600 mb-4">
+            HSS
+          </h1>
           <h1 className="text-4xl md:text-5xl font-bold text-white mb-4">
-            HSS TRANSPORTATION LLC
+            TRANSPORTATION LLC
           </h1>
 
           {/* Tagline */}
@@ -98,23 +87,6 @@ const Hero = () => {
           </div>
         </div>
       </div>
-
-      {/* Custom Animation */}
-      <style jsx>{`
-        @keyframes fadeInUp {
-          from {
-            opacity: 0;
-            transform: translateY(30px);
-          }
-          to {
-            opacity: 1;
-            transform: translateY(0);
-          }
-        }
-        .animate-fade-in {
-          animation: fadeInUp 1s ease-out forwards;
-        }
-      `}</style>
     </section>
   );
 };

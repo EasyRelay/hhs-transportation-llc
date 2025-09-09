@@ -25,14 +25,14 @@ const Header = () => {
   };
 
   return (
-    <header className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
-      isScrolled ? 'bg-white/90 backdrop-blur-md shadow-sm' : 'bg-transparent'
-    }`}>
+    <header className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${isScrolled ? 'bg-white backdrop-blur-md shadow-sm' : 'bg-transparent'
+      }`}>
       <nav className="container mx-auto px-6 py-4">
         <div className="flex items-center justify-between">
-          <Link to="/" className="text-2xl font-bold text-gray-800" style={{ fontFamily: 'Nunito' }}>
-            <div>
-              HSS TRANSPORTATION
+          <Link to="/" className="flex gap-5 items-center text-2xl font-bold text-gray-800" style={{ fontFamily: 'Nunito' }}>
+            <img src="/images/glass2-logo.png" alt="hhs-logo" className='w-20 h-18 rounded-sm' />
+            <div className={`${isScrolled ? "": "text-white"}`}>
+              TRANSPORTATION
               <div className="text-sm font-medium text-[#00c2e7] -mt-1">LLC</div>
             </div>
           </Link>
@@ -40,40 +40,40 @@ const Header = () => {
           {/* Desktop Menu */}
           {isHomePage ? (
             <div className="hidden md:flex items-center space-x-8">
-              <button 
+              <button
                 onClick={() => scrollToSection('home')}
-                className="text-gray-700 hover:text-[#00c2e7] transition-colors font-medium"
+                className={`${ isScrolled ? 'text-gray-700' : "text-white"} hover:text-[#00c2e7] transition-colors font-medium`}
               >
                 Home
               </button>
-              <button 
+              <button
                 onClick={() => scrollToSection('services')}
-                className="text-gray-700 hover:text-[#00c2e7] transition-colors font-medium"
+                className={`${ isScrolled ? 'text-gray-700' : "text-white"} hover:text-[#00c2e7] transition-colors font-medium`}
               >
                 Services
               </button>
-              <button 
+              <button
                 onClick={() => scrollToSection('about')}
-                className="text-gray-700 hover:text-[#00c2e7] transition-colors font-medium"
+                className={`${ isScrolled ? 'text-gray-700' : "text-white"} hover:text-[#00c2e7] transition-colors font-medium`}
               >
                 About
               </button>
-              <button 
+              <button
                 onClick={() => scrollToSection('contact')}
-                className="text-gray-700 hover:text-[#00c2e7] transition-colors font-medium"
+                className={`${ isScrolled ? 'text-gray-700' : "text-white"} hover:text-[#00c2e7] transition-colors font-medium`}
               >
                 Contact
               </button>
-              <button 
+              <button
                 onClick={() => scrollToSection('policies')}
-                className="text-gray-700 hover:text-[#00c2e7] transition-colors font-medium"
+                className={`${ isScrolled ? 'text-gray-700' : "text-white"} hover:text-[#00c2e7] transition-colors font-medium`}
               >
                 Policies
               </button>
             </div>
           ) : (
             <div className="hidden md:flex items-center space-x-8">
-              <Link 
+              <Link
                 to="/"
                 className="text-gray-700 hover:text-[#00c2e7] transition-colors font-medium"
               >
@@ -83,7 +83,7 @@ const Header = () => {
           )}
 
           {/* Mobile Menu Button */}
-          <button 
+          <button
             className="md:hidden"
             onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
           >
@@ -96,31 +96,31 @@ const Header = () => {
           <div className="md:hidden absolute top-full left-0 right-0 bg-white/95 backdrop-blur-md shadow-lg">
             {isHomePage ? (
               <div className="flex flex-col space-y-4 p-6">
-                <button 
+                <button
                   onClick={() => scrollToSection('home')}
                   className="text-left text-gray-700 hover:text-[#00c2e7] transition-colors font-medium"
                 >
                   Home
                 </button>
-                <button 
+                <button
                   onClick={() => scrollToSection('services')}
                   className="text-left text-gray-700 hover:text-[#00c2e7] transition-colors font-medium"
                 >
                   Services
                 </button>
-                <button 
+                <button
                   onClick={() => scrollToSection('about')}
                   className="text-left text-gray-700 hover:text-[#00c2e7] transition-colors font-medium"
                 >
                   About
                 </button>
-                <button 
+                <button
                   onClick={() => scrollToSection('contact')}
                   className="text-left text-gray-700 hover:text-[#00c2e7] transition-colors font-medium"
                 >
                   Contact
                 </button>
-                <button 
+                <button
                   onClick={() => scrollToSection('policies')}
                   className="text-left text-gray-700 hover:text-[#00c2e7] transition-colors font-medium"
                 >
@@ -129,7 +129,7 @@ const Header = () => {
               </div>
             ) : (
               <div className="flex flex-col space-y-4 p-6">
-                <Link 
+                <Link
                   to="/"
                   onClick={() => setIsMobileMenuOpen(false)}
                   className="text-left text-gray-700 hover:text-[#00c2e7] transition-colors font-medium"
