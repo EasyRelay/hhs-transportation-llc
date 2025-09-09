@@ -1,6 +1,12 @@
 import { FileText, Scale, Truck, AlertTriangle } from 'lucide-react';
+import { useEffect } from 'react';
 
 const TermsOfService = () => {
+
+  useEffect(() => {
+    window.scrollTo(0,0);
+  })
+
   return (
     <div className="min-h-screen bg-white py-20">
       <div className="container mx-auto px-6 max-w-4xl">
