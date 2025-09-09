@@ -44,7 +44,7 @@ const Footer = () => {
             </h3>
             <ul className="space-y-3">
               <li>
-                <button 
+                <button
                   onClick={() => scrollToSection('home')}
                   className="text-gray-400 hover:text-white transition-colors"
                   style={{ fontFamily: 'Inter' }}
@@ -53,7 +53,7 @@ const Footer = () => {
                 </button>
               </li>
               <li>
-                <button 
+                <button
                   onClick={() => scrollToSection('services')}
                   className="text-gray-400 hover:text-white transition-colors"
                   style={{ fontFamily: 'Inter' }}
@@ -62,7 +62,7 @@ const Footer = () => {
                 </button>
               </li>
               <li>
-                <button 
+                <button
                   onClick={() => scrollToSection('about')}
                   className="text-gray-400 hover:text-white transition-colors"
                   style={{ fontFamily: 'Inter' }}
@@ -71,7 +71,7 @@ const Footer = () => {
                 </button>
               </li>
               <li>
-                <button 
+                <button
                   onClick={() => scrollToSection('contact')}
                   className="text-gray-400 hover:text-white transition-colors"
                   style={{ fontFamily: 'Inter' }}
@@ -141,26 +141,29 @@ const Footer = () => {
 
         <div className="border-t border-gray-800 pt-8 text-center">
           <div className="flex flex-col md:flex-row justify-between items-center space-y-4 md:space-y-0">
-            <p className="text-gray-500" style={{ fontFamily: 'Inter' }}>
-              © 2025 HSS Transportation LLC. All rights reserved. Licensed and bonded transportation services.
-            </p>
+            <div className=''>
+              <p className="text-gray-500" style={{ fontFamily: 'Inter' }}>
+                © 2025 HSS Transportation LLC. All rights reserved. Licensed and bonded transportation services.
+              </p>
+              <p className='text-gray-500'>Created by <Link to="" className='hover:text-blue-500'>Easy IT</Link></p>
+            </div>
             <div className="flex space-x-6 text-sm">
-              <Link 
-                to="/privacy-policy" 
+              <Link
+                to="/privacy-policy"
                 className="text-gray-400 hover:text-[#00c2e7] transition-colors"
                 style={{ fontFamily: 'Inter' }}
               >
                 Privacy Policy
               </Link>
-              <Link 
-                to="/cookie-policy" 
+              <Link
+                to="/cookie-policy"
                 className="text-gray-400 hover:text-[#00c2e7] transition-colors"
                 style={{ fontFamily: 'Inter' }}
               >
                 Cookie Policy
               </Link>
-              <Link 
-                to="/terms-of-service" 
+              <Link
+                to="/terms-of-service"
                 className="text-gray-400 hover:text-[#00c2e7] transition-colors"
                 style={{ fontFamily: 'Inter' }}
               >
