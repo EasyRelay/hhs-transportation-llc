@@ -5,7 +5,7 @@ const Hero = () => {
   const heroRef = useRef<HTMLDivElement>(null);
 
   useEffect(() => {
-    window.scrollTo(0,0);
+    window.scrollTo(0, 0);
   })
 
   useEffect(() => {
@@ -27,14 +27,21 @@ const Hero = () => {
     return () => observer.disconnect();
   }, []);
 
+  const scrollToSection = (sectionId: string) => {
+    const element = document.getElementById(sectionId);
+    if (element) {
+      element.scrollIntoView({ behavior: 'smooth' });
+    }
+  };
+
   return (
     <section id="home" className="relative min-h-screen flex items-center justify-center overflow-hidden bg-gradient-to-br from-gray-900 to-gray-700">
       {/* Background Image with Overlay */}
       <div className="absolute inset-0 overflow-hidden">
-        <img 
-          src="https://media.wired.com/photos/5b9c3d5e7d9d332cf364ad66/3:2/w_2560%2Cc_limit/AV-Trucks-187479297.jpg" 
-          alt="Truck transportation" 
-          className="absolute inset-0 w-full h-full object-cover" 
+        <img
+          src="https://media.wired.com/photos/5b9c3d5e7d9d332cf364ad66/3:2/w_2560%2Cc_limit/AV-Trucks-187479297.jpg"
+          alt="Truck transportation"
+          className="absolute inset-0 w-full h-full object-cover"
         />
         <div className="absolute inset-0 bg-black/50"></div>
       </div>
@@ -57,11 +64,16 @@ const Hero = () => {
 
           {/* CTA Buttons */}
           <div className="flex flex-col sm:flex-row gap-6 justify-center items-center mb-16">
-            <button className="group bg-gradient-to-r from-cyan-500 to-blue-600 text-white px-8 py-4 rounded-full font-semibold text-lg hover:from-cyan-600 hover:to-blue-700 transition-all duration-300 transform hover:scale-105 shadow-lg hover:shadow-xl flex items-center">
+            <button
+              className="group bg-gradient-to-r from-cyan-500 to-blue-600 text-white px-8 py-4 rounded-full font-semibold text-lg hover:from-cyan-600 hover:to-blue-700 transition-all duration-300 transform hover:scale-105 shadow-lg hover:shadow-xl flex items-center"
+              onClick={() => scrollToSection('contact')}
+            >
               Get Started
               <ArrowRight size={20} className="ml-2 group-hover:translate-x-1 transition-transform" />
             </button>
-            <button className="border-2 border-white text-white bg-transparent px-8 py-4 rounded-full font-semibold text-lg hover:bg-white hover:text-gray-900 transition-all duration-300 transform hover:scale-105">
+            <button
+              onClick={() => scrollToSection('about')}
+              className="border-2 border-white text-white bg-transparent px-8 py-4 rounded-full font-semibold text-lg hover:bg-white hover:text-gray-900 transition-all duration-300 transform hover:scale-105">
               Learn More
             </button>
           </div>
