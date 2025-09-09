@@ -96,7 +96,7 @@ const Hero = () => {
       </div>
 
       {/* Custom Animation */}
-      <style js>{`
+      <style jsx>{`
         @keyframes fadeInUp {
           from {
             opacity: 0;
