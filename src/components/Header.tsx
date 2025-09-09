@@ -24,6 +24,8 @@ const Header = () => {
     setIsMobileMenuOpen(false);
   };
 
+  const currentPage : string = window.location.hostname.split('/')[window.location.hostname.split('/').length-1];
+
   return (
     <header className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${isScrolled ? 'bg-white backdrop-blur-md shadow-sm' : 'bg-transparent'
       }`}>
@@ -31,7 +33,7 @@ const Header = () => {
         <div className="flex items-center justify-between">
           <Link to="/" className="flex gap-5 items-center text-2xl font-bold text-gray-800" style={{ fontFamily: 'Nunito' }}>
             <img src="/images/glass2-logo.png" alt="hhs-logo" className='w-20 h-18 rounded-sm' />
-            <div className={`${isScrolled ? "": "text-white"}`}>
+            <div className={`${isScrolled && currentPage !== '' ? "": "text-white"}`}>
               TRANSPORTATION
               <div className="text-sm font-medium text-[#00c2e7] -mt-1">LLC</div>
             </div>
