@@ -103,6 +103,26 @@ const PrivacyPolicy = () => {
           </div>
 
           <div className="bg-white border border-gray-200 rounded-2xl p-8 mb-8">
+            <h2 className="text-2xl font-bold text-gray-800 mb-4 flex items-center" style={{ fontFamily: 'Nunito' }}>
+              <Lock size={24} className="text-[#00c2e7] mr-3" />
+              RingCentral Integration
+            </h2>
+            <div className="space-y-4 text-gray-700" style={{ fontFamily: 'Inter' }}>
+              <p>Our service uses RingCentral's APIs to facilitate communication. When you connect your RingCentral account, we may access and use data such as:</p>
+              
+              <ul className="list-disc pl-6 space-y-2">
+                <li>Your RingCentral account information</li>
+                <li>Call and message metadata (not message content)</li>
+                <li>Contact and directory information</li>
+              </ul>
+              
+              <p className="mt-4 p-4 bg-[#f8f9fa] rounded-lg border-l-4 border-[#00c2e7]">
+                <strong>This data is not shared with third parties except as required to operate the service.</strong>
+              </p>
+            </div>
+          </div>
+
+          <div className="bg-[#f8f9fa] rounded-2xl p-8 mb-8">
             <h2 className="text-2xl font-bold text-gray-800 mb-4" style={{ fontFamily: 'Nunito' }}>
               Data Security & Retention
             </h2>
